@@ -1,0 +1,36 @@
+@page "/perkalian"
+
+<PageTitle>Perkalian</PageTitle>
+
+
+<h1>Hello, Ini Halaman Perkalian</h1>
+
+Welcome to your new app.
+halo halo guys disini saya belajar
+<div class="mb-3">
+    <label>Angka Pertama:</label>
+    <input @bind="Number1" type="number" />
+</div>
+<div class="mb-3">
+    <label>Angka Kedua:</label>
+    <input @bind="Number2" type="number" />
+</div>
+<div>
+    <button @onclick="CalculateSum">Hitung</button>
+</div>
+<div>
+    <h4>Hasil: @jumlah</h4>
+</div>
+
+
+@code {
+   private double Number1 { get; set; }
+    private double Number2 { get; set; }
+    private double jumlah { get; set; }
+
+    private void CalculateSum()
+    {
+        jumlah = Number1 * Number2;
+    }
+
+}
